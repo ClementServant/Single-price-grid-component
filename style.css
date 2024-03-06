@@ -1,5 +1,5 @@
 /*** Font Family ***/
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 /*** Général ***/
 :root  {
     --cyan: hsl(179, 62%, 43%);
@@ -18,5 +18,152 @@ body  {
     width: 100vw;
     height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
 }
 /*** Card ***/
+.card {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+/*** Card header ***/
+.card-header {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 3rem;
+    gap: 1rem;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+}
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cyan);
+}
+.header-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--bright-yellow);
+}
+.header-info {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--grayish-blue);
+}
+/*** Container Infos ***/
+.card-info {
+    display: flex;
+    flex-direction: row;
+}
+/*** Subscription ***/
+.subscription {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem;
+    background: var(--cyan);
+    color: var(--light-gray);
+    border-radius: 0 0 0 10px;
+}
+.subscription-title {
+    font-size: 1.2rem;
+}
+.subscription-price{
+    font-size: 1rem;
+    color: hsl(204, 43%, 93%, 0.5);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+span  {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-gray);
+    margin-right: 10px;
+}
+.subscription-button {
+    background: var(--bright-yellow);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-gray);
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+/*** Infos ***/
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem;
+    background: hsl(179, 62%, 43%, 0.6);
+}
+.info-title {
+    color: var(--light-gray);
+    font-size: 1.2rem;
+}
+.info-text {
+    margin-top: 1rem;
+    color: hsl(204, 43%, 93%, 0.8);
+    font-size: 1rem;
+}
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+        height: auto;
+    }
+    /*** Card header ***/
+    .card-header {
+        padding: 1.5rem;
+        border-radius: 10px 10px 0 0;
+    }
+    .header-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--cyan);
+    }
+    .header-text {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--bright-yellow);
+    }
+    .header-info {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: var(--grayish-blue);
+    }
+    /*** Container Infos ***/
+    .card-info {
+        flex-direction: column;
+    }
+    /*** Subscription ***/
+    .subscription {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+    .subscription-title {
+        font-size: 1rem;
+    }
+    /*** Infos ***/
+    .info {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 0 0 10px 10px;
+    }
+    .info-title {
+        color: var(--light-gray);
+        font-size: 1.2rem;
+    }
+    .info-text {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+}
